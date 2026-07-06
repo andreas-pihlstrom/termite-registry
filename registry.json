@@ -432,6 +432,21 @@
       "arch": [
         "arm64"
       ]
+    },
+    {
+      "kind": "plugin",
+      "id": "dev.termite.sim",
+      "name": "Sim",
+      "description": "the iOS Simulator as a termite split \u2014 build/run/screenshot your Swift app, agent-driven",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "dist/sim-1.0.0.zip",
+      "sha256": "0865fefc8d6c722a8914a00397dc82d131d6417db0e736ca1a8729ea2c857cba",
+      "sdk": "v1",
+      "arch": [
+        "arm64"
+      ]
     }
   ]
 }
