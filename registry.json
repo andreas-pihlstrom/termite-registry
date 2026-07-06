@@ -406,14 +406,14 @@
       "author": "termite",
       "license": "MIT",
       "version": "1.0.0",
-      "url": "https://github.com/PLACEHOLDER/termite-registry/releases/download/chromium-1.0.0/chromium.zip",
+      "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/chromium.zip",
       "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
       "sdk": "v1",
       "arch": [
         "arm64"
       ],
       "payload": {
-        "url": "https://github.com/PLACEHOLDER/termite-registry/releases/download/chromium-1.0.0/cef-frameworks.zip",
+        "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/cef-frameworks.zip",
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
       },
       "note": "payload release pending \u2014 until then: plugins.sh + README-CEF.md"
