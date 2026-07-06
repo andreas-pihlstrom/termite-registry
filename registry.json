@@ -420,21 +420,6 @@
     },
     {
       "kind": "plugin",
-      "id": "dev.termite.appdock",
-      "name": "AppDock",
-      "description": "dock any native app into termite as a split + drive it from agents (AX + MCP)",
-      "author": "termite",
-      "license": "MIT",
-      "version": "1.0.0",
-      "file": "dist/appdock-1.0.0.zip",
-      "sha256": "12a13bca4542c494edd9afb2a44b5f7fe71c4a40b002cdcd9dec2f75955ccef7",
-      "sdk": "v1",
-      "arch": [
-        "arm64"
-      ]
-    },
-    {
-      "kind": "plugin",
       "id": "dev.termite.sim",
       "name": "Sim",
       "description": "the iOS Simulator as a termite split \u2014 build/run/screenshot your Swift app, agent-driven",
