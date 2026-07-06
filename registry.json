@@ -1,0 +1,422 @@
+{
+  "api": 1,
+  "name": "the termite marketplace",
+  "featured": [
+    "termite/breath",
+    "termite/waterline",
+    "termite/termite",
+    "dev.termite.detox"
+  ],
+  "entries": [
+    {
+      "kind": "shader",
+      "id": "termite/drift",
+      "name": "Drift",
+      "description": "a dual-tone color field slowly folding over itself",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/drift.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/breath",
+      "name": "Breath",
+      "description": "the background inhales on an 8s cycle; idling deepens it",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/breath.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/lagoon",
+      "name": "Lagoon",
+      "description": "teal caustic light webs, pool-floor slow",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/lagoon.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/silk",
+      "name": "Silk",
+      "description": "translucent ribbons swaying, dusty violet",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/silk.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/ember",
+      "name": "Ember",
+      "description": "sparse warm motes rising and winking out",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/ember.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/fireflies",
+      "name": "Fireflies",
+      "description": "wandering green-gold points, soft blinking",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/fireflies.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/clouds",
+      "name": "Clouds",
+      "description": "a pale cloud bank crossing at stratus pace",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/clouds.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/mist",
+      "name": "Mist",
+      "description": "ground fog breathing along the bottom",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/mist.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/deep",
+      "name": "Deep",
+      "description": "abyssal gradient; a faint sonar ring every nine seconds",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/deep.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/tide",
+      "name": "Tide",
+      "description": "a waterline breathing at two-thirds height, foam whisper",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/tide.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/zen",
+      "name": "Zen",
+      "description": "raked sand rings around two slowly orbiting stones",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/zen.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/lanterns",
+      "name": "Lanterns",
+      "description": "five paper lanterns climbing on staggered loops",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/lanterns.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/snowfall",
+      "name": "Snowfall",
+      "description": "three parallax layers of unhurried flakes",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/snowfall.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/petals",
+      "name": "Petals",
+      "description": "pink petals drifting down-wind with a sway",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/petals.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/koi",
+      "name": "Koi",
+      "description": "three blurred koi gliding under frosted ice",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/koi.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/moss",
+      "name": "Moss",
+      "description": "green mottle creeping at lichen speed",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/moss.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/dunes",
+      "name": "Dunes",
+      "description": "layered dune silhouettes, crest light, sand haze",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/dunes.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/horizon",
+      "name": "Horizon",
+      "description": "a dawn gradient whose mood shifts over three minutes",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/horizon.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/rainfall",
+      "name": "Rainfall",
+      "description": "rain trails sliding down window glass",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/rainfall.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/nebula",
+      "name": "Nebula",
+      "description": "slow-turning gas in magenta and indigo, dim stars",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/nebula.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/comet",
+      "name": "Comet",
+      "description": "every ~17s one soft comet crosses the upper sky",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/comet.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/meadow",
+      "name": "Meadow",
+      "description": "green ground glow + pollen adrift",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/meadow.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/ink",
+      "name": "Ink",
+      "description": "ink blots blooming and dissolving in water",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/ink.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/marble",
+      "name": "Marble",
+      "description": "fine veins wandering through warped stone",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/marble.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/prism",
+      "name": "Prism",
+      "description": "one faint light shaft, spectrum-fringed, slowly swinging",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/prism.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/halo",
+      "name": "Halo",
+      "description": "a breathing glow that follows the cursor",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/halo.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/waterline",
+      "name": "Waterline",
+      "description": "the scene reflects in water along the bottom edge",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/waterline.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/slowscan",
+      "name": "Slowscan",
+      "description": "a luminous band sweeps down every twelve seconds",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/slowscan.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/voronoi",
+      "name": "Voronoi",
+      "description": "drifting cells, edges barely glowing",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/voronoi.metal"
+    },
+    {
+      "kind": "shader",
+      "id": "termite/eclipse",
+      "name": "Eclipse",
+      "description": "a dark disc with a breathing corona, upper right",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "shaders/termite/eclipse.metal"
+    },
+    {
+      "kind": "theme",
+      "id": "termite/termite",
+      "name": "Termite",
+      "description": "the mark's palette: near-black, off-white, quiet accents",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "themes/termite/termite.json"
+    },
+    {
+      "kind": "theme",
+      "id": "termite/c64",
+      "name": "C64",
+      "description": "Pepto palette \u2014 blue on blue, the original",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "themes/termite/c64.json"
+    },
+    {
+      "kind": "theme",
+      "id": "termite/amber",
+      "name": "Amber",
+      "description": "one amber ink, phosphor warm",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "themes/termite/amber.json"
+    },
+    {
+      "kind": "theme",
+      "id": "termite/green",
+      "name": "Green",
+      "description": "one green ink, straight from the bunker",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "themes/termite/green.json"
+    },
+    {
+      "kind": "rig",
+      "id": "termite/midnight-drift",
+      "name": "Midnight Drift",
+      "description": "dark room, slow color field, bar cursor",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "rigs/termite/midnight-drift.conf"
+    },
+    {
+      "kind": "rig",
+      "id": "termite/c64-forever",
+      "name": "C64 Forever",
+      "description": "the machine this terminal remembers",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "rigs/termite/c64-forever.conf"
+    },
+    {
+      "kind": "plugin",
+      "id": "dev.termite.detox",
+      "name": "Detox",
+      "description": "a WebAudio synth with an inline live-coding editor",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "dist/detox-1.0.0.zip",
+      "sha256": "47bc33954e20d4b8547b053d1f7f6d26a4053607f776bd4829c490b264255757",
+      "sdk": "v1",
+      "arch": [
+        "arm64"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "id": "dev.termite.bridge",
+      "name": "Bridge",
+      "description": "bind agent sessions to panes from the menu bar",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "file": "dist/bridge-1.0.0.zip",
+      "sha256": "0332c1fe4935d1ce2d026248b2da1448a9d82b319faf5b73ddc75fabd25a39a2",
+      "sdk": "v1",
+      "arch": [
+        "arm64"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "id": "dev.termite.chromium",
+      "name": "Chromium",
+      "description": "real Chromium as a docked sidecar + agent browser API (MCP)",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "url": "https://github.com/PLACEHOLDER/termite-registry/releases/download/chromium-1.0.0/chromium.zip",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sdk": "v1",
+      "arch": [
+        "arm64"
+      ],
+      "payload": {
+        "url": "https://github.com/PLACEHOLDER/termite-registry/releases/download/chromium-1.0.0/cef-frameworks.zip",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "note": "payload release pending \u2014 until then: plugins.sh + README-CEF.md"
+    }
+  ]
+}

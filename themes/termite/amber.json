@@ -1,0 +1,25 @@
+{
+  "name": "Amber",
+  "background": "#1a1000",
+  "foreground": "#FFB000",
+  "cursor": "#FFB000",
+  "border": "#B07800",
+  "ansi": [
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000",
+    "#FFB000"
+  ]
+}

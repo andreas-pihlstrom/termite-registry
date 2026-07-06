@@ -1,0 +1,25 @@
+{
+  "name": "Termite",
+  "background": "#141414",
+  "foreground": "#F2F0EB",
+  "cursor": "#F2F0EB",
+  "border": "#2A2A28",
+  "ansi": [
+    "#1E1E1C",
+    "#C97B6B",
+    "#8FA98A",
+    "#D4C08A",
+    "#8A9AB8",
+    "#A98AAB",
+    "#8AB8B0",
+    "#C8C6C0",
+    "#4A4A46",
+    "#E09A88",
+    "#AECBA8",
+    "#EFD9A0",
+    "#A8BCDD",
+    "#CBA8CD",
+    "#A8DDD3",
+    "#F2F0EB"
+  ]
+}

@@ -1,0 +1,12 @@
+name: validate
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate registry (schema + shader compile + theme parse)
+        run: python3 tools/validate.py
