@@ -401,7 +401,7 @@
     {
       "kind": "plugin",
       "id": "dev.termite.chromium",
-      "name": "Chromium",
+      "name": "Browser",
       "description": "real Chromium as a docked sidecar + agent browser API (MCP)",
       "author": "termite",
       "license": "MIT",
