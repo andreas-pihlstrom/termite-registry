@@ -375,9 +375,9 @@
       "description": "a WebAudio synth with an inline live-coding editor",
       "author": "termite",
       "license": "MIT",
-      "version": "1.0.0",
-      "file": "dist/detox-1.0.0.zip",
-      "sha256": "47bc33954e20d4b8547b053d1f7f6d26a4053607f776bd4829c490b264255757",
+      "version": "1.1.0",
+      "file": "dist/detox-1.1.0.zip",
+      "sha256": "69b86bd79956e94be7452493e1141066b73453118b9b9b634fb0ddc01cfef091",
       "sdk": "v1",
       "arch": [
         "arm64"
@@ -390,9 +390,9 @@
       "description": "bind agent sessions to panes from the menu bar",
       "author": "termite",
       "license": "MIT",
-      "version": "1.0.0",
-      "file": "dist/bridge-1.0.0.zip",
-      "sha256": "0332c1fe4935d1ce2d026248b2da1448a9d82b319faf5b73ddc75fabd25a39a2",
+      "version": "1.1.0",
+      "file": "dist/bridge-1.1.0.zip",
+      "sha256": "7bb2475ed62f59ba0b2074445dbb9aeb0bb186d34d767626041f6944d9542bbc",
       "sdk": "v1",
       "arch": [
         "arm64"
@@ -407,16 +407,15 @@
       "license": "MIT",
       "version": "1.0.0",
       "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/chromium.zip",
-      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "06dcf9e257d922117225441ad3c412ed027e655c00e9d37d903829bb6303c782",
       "sdk": "v1",
       "arch": [
         "arm64"
       ],
       "payload": {
         "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/cef-frameworks.zip",
-        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
-      },
-      "note": "payload release pending \u2014 until then: plugins.sh + README-CEF.md"
+        "sha256": "8dc69fa47142afdd8e35de990fe38f6c7d9b10b2f8a65f16f22b213b117dcdc3"
+      }
     },
     {
       "kind": "plugin",
@@ -425,9 +424,24 @@
       "description": "the iOS Simulator as a termite split \u2014 build/run/screenshot your Swift app, agent-driven",
       "author": "termite",
       "license": "MIT",
+      "version": "1.1.0",
+      "file": "dist/sim-1.1.0.zip",
+      "sha256": "d45e0f6389767b2e0b8311aac39328da4897222eb2ece881e320cec4ac78280c",
+      "sdk": "v1",
+      "arch": [
+        "arm64"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "id": "dev.termite.swarm",
+      "name": "Swarm",
+      "description": "see and jump between every terminal and agent session",
+      "author": "termite",
+      "license": "MIT",
       "version": "1.0.0",
-      "file": "dist/sim-1.0.0.zip",
-      "sha256": "0865fefc8d6c722a8914a00397dc82d131d6417db0e736ca1a8729ea2c857cba",
+      "file": "dist/swarm-1.0.0.zip",
+      "sha256": "dfc51ac1db56c84905061964a859950fe555583dfd67cac4754e04f13c8f5fdc",
       "sdk": "v1",
       "arch": [
         "arm64"
