@@ -405,15 +405,15 @@
       "description": "real Chromium as a docked sidecar + agent browser API (MCP)",
       "author": "termite",
       "license": "MIT",
-      "version": "1.0.0",
-      "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/chromium.zip",
+      "version": "1.0.1",
+      "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.1/chromium.zip",
       "sha256": "1f410d7b607022f3397e6ac74d2dab57392329d8d182471d56e44e570b097e09",
       "sdk": "v1",
       "arch": [
         "arm64"
       ],
       "payload": {
-        "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/cef-frameworks.zip",
+        "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.1/cef-frameworks.zip",
         "sha256": "8dc69fa47142afdd8e35de990fe38f6c7d9b10b2f8a65f16f22b213b117dcdc3"
       }
     },
