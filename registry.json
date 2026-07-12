@@ -407,7 +407,7 @@
       "license": "MIT",
       "version": "1.0.0",
       "url": "https://github.com/andreas-pihlstrom/termite-registry/releases/download/chromium-1.0.0/chromium.zip",
-      "sha256": "06dcf9e257d922117225441ad3c412ed027e655c00e9d37d903829bb6303c782",
+      "sha256": "1f410d7b607022f3397e6ac74d2dab57392329d8d182471d56e44e570b097e09",
       "sdk": "v1",
       "arch": [
         "arm64"
