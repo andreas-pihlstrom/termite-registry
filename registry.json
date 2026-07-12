@@ -390,9 +390,9 @@
       "description": "bind agent sessions to panes from the menu bar",
       "author": "termite",
       "license": "MIT",
-      "version": "1.1.0",
-      "file": "dist/bridge-1.1.0.zip",
-      "sha256": "7bb2475ed62f59ba0b2074445dbb9aeb0bb186d34d767626041f6944d9542bbc",
+      "version": "1.2.0",
+      "file": "dist/bridge-1.2.0.zip",
+      "sha256": "6b2b1333c3be435e2a7546798f1e871f4b8901208b0eb81e7a6ca9a7362c2915",
       "sdk": "v1",
       "arch": [
         "arm64"
