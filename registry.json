@@ -5,6 +5,7 @@
     "termite/breath",
     "termite/waterline",
     "termite/termite",
+    "dev.termite.demo-inbox",
     "dev.termite.detox"
   ],
   "entries": [
@@ -367,6 +368,23 @@
       "license": "MIT",
       "version": "1.0.0",
       "file": "rigs/termite/c64-forever.conf"
+    },
+    {
+      "kind": "channel",
+      "id": "dev.termite.demo-inbox",
+      "name": "Demo Inbox",
+      "description": "a local Receive / Route / Reply connector for trying Termite Channels",
+      "author": "termite",
+      "license": "MIT",
+      "version": "1.0.0",
+      "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/demo-inbox",
+      "file": "dist/demo-inbox-1.0.0.zip",
+      "sha256": "b79a5e7cdbc637c04584e90ce0e4ffcdba176356a93d0beadeff914835114b51",
+      "sdk": "v1",
+      "capabilities": [
+        "channels",
+        "events.read"
+      ]
     },
     {
       "kind": "plugin",

@@ -5,14 +5,17 @@ every theme parses. CI runs this on every PR; merged = published.
 Usage: tools/validate.py   (from anywhere; paths resolve from the repo root)
 Exit 0 = publishable.
 """
+import hashlib
 import json
+import stat
 import subprocess
 import sys
 import tempfile
-from pathlib import Path
+import zipfile
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parent.parent
-KINDS = {"shader", "theme", "rig", "patch", "plugin"}
+KINDS = {"shader", "theme", "rig", "patch", "plugin", "channel"}
 REQUIRED = ["kind", "id", "name", "description", "author", "license", "version"]
 
 errors = []
@@ -67,6 +70,85 @@ def check_rig(entry, path: Path):
             err(f"{entry['id']}: rig uses unknown key '{key}'")
 
 
+def check_channel_archive(entry, path: Path):
+    try:
+        with zipfile.ZipFile(path) as archive:
+            names = archive.namelist()
+            for name in names:
+                member = PurePosixPath(name)
+                if member.is_absolute() or ".." in member.parts:
+                    err(f"{entry['id']}: archive contains unsafe path '{name}'")
+                    return
+            manifests = [name for name in names
+                         if len(PurePosixPath(name).parts) == 2
+                         and PurePosixPath(name).name == "manifest.json"]
+            if len(manifests) != 1:
+                err(f"{entry['id']}: Channel archive needs exactly one root manifest.json")
+                return
+            manifest = json.loads(archive.read(manifests[0]))
+            if not isinstance(manifest, dict):
+                err(f"{entry['id']}: Channel manifest is not a JSON object")
+                return
+            if manifest.get("manifestVersion") != 1:
+                err(f"{entry['id']}: Channel archive needs a v1 manifest")
+            if manifest.get("id") != entry["id"]:
+                err(f"{entry['id']}: archive manifest id does not match registry id")
+            if manifest.get("version") != entry["version"]:
+                err(f"{entry['id']}: archive manifest version does not match registry version")
+            capabilities = manifest.get("capabilities")
+            if not isinstance(capabilities, list) or "channels" not in capabilities:
+                err(f"{entry['id']}: archive manifest does not request channels")
+            entrypoint = manifest.get("entrypoint")
+            if not isinstance(entrypoint, str) or not entrypoint:
+                err(f"{entry['id']}: archive manifest has no entrypoint")
+                return
+            executable = str(PurePosixPath(manifests[0]).parent / entrypoint)
+            if executable not in names:
+                err(f"{entry['id']}: archive entrypoint is missing")
+                return
+            mode = archive.getinfo(executable).external_attr >> 16
+            if stat.S_ISLNK(mode):
+                err(f"{entry['id']}: archive entrypoint cannot be a symlink")
+            if not mode & 0o111:
+                err(f"{entry['id']}: archive entrypoint is not executable")
+    except (OSError, UnicodeDecodeError, zipfile.BadZipFile,
+            json.JSONDecodeError) as exc:
+        err(f"{entry['id']}: invalid Channel archive ({exc})")
+
+
+def check_extension(entry):
+    if not (entry.get("url") or entry.get("file")):
+        err(f"{entry['id']}: {entry['kind']} needs 'url' or 'file'")
+    if entry.get("url") and not entry.get("sha256"):
+        err(f"{entry['id']}: remote {entry['kind']} needs 'sha256'")
+    if entry.get("kind") == "channel":
+        capabilities = entry.get("capabilities")
+        if not isinstance(capabilities, list) or "channels" not in capabilities:
+            err(f"{entry['id']}: Channel metadata must declare the channels capability")
+
+    rel = entry.get("file")
+    if not rel:
+        return
+    path = (ROOT / rel).resolve()
+    try:
+        path.relative_to(ROOT.resolve())
+    except ValueError:
+        err(f"{entry['id']}: archive path leaves the registry")
+        return
+    if not path.is_file():
+        err(f"{entry['id']}: archive missing: {rel}")
+        return
+    expected = entry.get("sha256")
+    if not expected:
+        err(f"{entry['id']}: local {entry['kind']} needs 'sha256'")
+    else:
+        actual = hashlib.sha256(path.read_bytes()).hexdigest()
+        if actual != expected:
+            err(f"{entry['id']}: archive sha256 is {actual}, expected {expected}")
+    if entry.get("kind") == "channel":
+        check_channel_archive(entry, path)
+
+
 def main():
     reg = json.loads((ROOT / "registry.json").read_text())
     entries = reg.get("entries", [])
@@ -83,11 +165,8 @@ def main():
         ids.add(e.get("id"))
 
         kind = e.get("kind")
-        if kind == "plugin":
-            if not (e.get("url") or e.get("file")):
-                err(f"{e['id']}: plugin needs 'url' or 'file'")
-            if e.get("url") and not e.get("sha256"):
-                err(f"{e['id']}: remote plugin needs 'sha256'")
+        if kind in {"plugin", "channel"}:
+            check_extension(e)
             continue
 
         rel = e.get("file")

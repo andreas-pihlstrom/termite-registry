@@ -8,10 +8,14 @@ SRC="$1"; OUT="$2"
 [ -f "$SRC/manifest.json" ] || { echo "no manifest.json in $SRC" >&2; exit 1; }
 mkdir -p "$(dirname "$OUT")"
 rm -f "$OUT"
-# ditto preserves signatures/xattrs sensibly; exclude payload symlinks.
+# Code signatures live in file contents. Strip Mac-only resource forks,
+# quarantine, ACLs, and extended attributes so shared archives do not contain
+# AppleDouble `._*` metadata or inherit the author's quarantine state.
 STAGE=$(mktemp -d)
-ditto "$SRC" "$STAGE/$(basename "$SRC")"
+ditto --norsrc --noextattr --noqtn --noacl \
+  "$SRC" "$STAGE/$(basename "$SRC")"
 rm -rf "$STAGE/$(basename "$SRC")/Frameworks" "$STAGE/$(basename "$SRC")"/*.log
-(cd "$STAGE" && ditto -c -k --keepParent "$(basename "$SRC")" "$OLDPWD/$OUT")
+(cd "$STAGE" && ditto -c -k --keepParent --norsrc --noextattr --noqtn --noacl \
+  "$(basename "$SRC")" "$OLDPWD/$OUT")
 rm -rf "$STAGE"
 shasum -a 256 "$OUT" | awk '{print $1}'
