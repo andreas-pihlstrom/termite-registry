@@ -1,0 +1,11 @@
+{
+  "homeserver": "https://matrix.example.com",
+  "access_token": "",
+  "room_ids": ["!room-id:example.com"],
+  "own_user_id": "@you:example.com",
+  "sync_timeout_seconds": 30,
+  "timeline_limit": 25,
+  "channel_name": "Matrix Rooms",
+  "account": "@you:example.com",
+  "allow_insecure_local": false
+}

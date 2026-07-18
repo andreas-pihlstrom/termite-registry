@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.command-queue",
+  "name": "Command Queue",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Bridge an explicitly configured JSON producer and consumer through Termite's reviewed Work Inbox",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/command-queue"
+}

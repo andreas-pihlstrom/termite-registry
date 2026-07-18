@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.clipboard-inbox",
+  "name": "Clipboard Inbox",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Opt-in macOS clipboard changes as reviewable work, with separately approved clipboard replies",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/clipboard-inbox"
+}

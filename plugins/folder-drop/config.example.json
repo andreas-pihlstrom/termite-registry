@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "inbox": "./inbox",
+  "outbox": "./outbox",
+  "pollIntervalSeconds": 2
+}

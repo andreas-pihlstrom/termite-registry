@@ -10,3 +10,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate registry (schema + shader compile + theme parse)
         run: python3 tools/validate.py
+      - name: Test first-party Channel connectors offline
+        run: python3 tools/test-channels.py

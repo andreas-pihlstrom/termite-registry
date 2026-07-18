@@ -56,6 +56,42 @@ termite channel new ./my-channel
 termite extension validate ./my-channel
 ```
 
+First-party connectors also ship offline tests. Run every connector suite with:
+
+```sh
+python3 tools/test-channels.py
+```
+
+Provider credentials never belong in an archive. Packages include a
+`config.example.json`; copy it to `config.json` after installation or store
+secrets in the documented macOS Keychain service. Registry metadata states
+whether each connector is `two-way`, `inbound-only`, or `read-only`, plus the
+configuration required before it can connect.
+
+### First-party catalog
+
+| Connector | Mode | Explicit setup |
+|---|---|---|
+| [Demo Inbox](plugins/demo-inbox) | two-way | none |
+| [Slack](plugins/slack) | two-way | bot token + channel |
+| [Telegram](plugins/telegram) | two-way | bot token + chat allowlist |
+| [Discord](plugins/discord) | two-way | bot token + channel allowlist |
+| [Matrix](plugins/matrix) | two-way | homeserver token + room allowlist |
+| [iMessage](plugins/imessage) | two-way | Full Disk Access + chat allowlist |
+| [Mastodon](plugins/mastodon) | two-way | instance + access token |
+| [GitHub Issues](plugins/github-issues) | two-way | token + repository allowlist |
+| [Linear](plugins/linear) | two-way | token + team/project allowlist |
+| [Jira Cloud](plugins/jira) | two-way | site + token + project allowlist |
+| [IMAP Mail](plugins/imap-mail) | two-way | TLS IMAP; SMTP optional |
+| [Webhook Inbox](plugins/webhook-inbox) | two-way | shared secret; callback optional |
+| [ntfy Topics](plugins/ntfy) | two-way | server + topics; reply topic optional |
+| [RSS and Atom](plugins/rss-feed) | read-only | HTTPS feed URLs |
+| [Folder Drop](plugins/folder-drop) | two-way | inbox + outbox folders |
+| [Clipboard Inbox](plugins/clipboard-inbox) | two-way | separate read/write opt-ins |
+| [Git Watch](plugins/git-watch) | read-only | local repository |
+| [Command Queue](plugins/command-queue) | two-way | producer + consumer argv arrays |
+| [Apple Reminders](plugins/apple-reminders) | read-only | Reminders list allowlist |
+
 ## License
 
 Entries declare their own license (MIT for everything seeded here).

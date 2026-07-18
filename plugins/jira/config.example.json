@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://your-site.atlassian.net",
+  "email": "you@example.com",
+  "projectKeys": ["ENG"],
+  "pollSeconds": 60,
+  "initialLookbackSeconds": 86400,
+  "account": "your-site",
+  "projectHints": {
+    "ENG": "~/src/project"
+  }
+}

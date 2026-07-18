@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "databasePath": "~/Library/Messages/chat.db",
+  "allowedHandles": [],
+  "allowedChatGUIDs": [],
+  "sendApprovedReplies": false,
+  "includeExistingMessages": false,
+  "pollIntervalSeconds": 3,
+  "maxMessagesPerPoll": 50
+}

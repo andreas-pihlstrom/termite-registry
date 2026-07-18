@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.folder-drop",
+  "name": "Folder Drop",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Turn files dropped into one explicit folder into reviewed work; write approved replies to an outbox",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/folder-drop"
+}

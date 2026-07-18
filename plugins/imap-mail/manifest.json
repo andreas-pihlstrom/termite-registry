@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.imap-mail",
+  "name": "IMAP Mail",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Poll an IMAP mailbox and optionally send explicitly approved replies with SMTP",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/imap-mail"
+}

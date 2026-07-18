@@ -1,0 +1,11 @@
+{
+  "base_url": "https://mastodon.social",
+  "access_token": "",
+  "poll_seconds": 60,
+  "max_notifications": 40,
+  "reply_visibility": "unlisted",
+  "max_reply_characters": 500,
+  "channel_name": "Mastodon Mentions",
+  "account": "@you@example.social",
+  "allow_insecure_local": false
+}

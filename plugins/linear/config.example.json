@@ -1,0 +1,9 @@
+{
+  "teamIds": ["00000000-0000-0000-0000-000000000000"],
+  "projectIds": [],
+  "assignedToMeOnly": true,
+  "pollSeconds": 30,
+  "initialLookbackSeconds": 86400,
+  "account": "linear-workspace",
+  "projectHints": {}
+}

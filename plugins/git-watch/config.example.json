@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "repository": "",
+  "includeExistingCommits": false,
+  "pollIntervalSeconds": 5,
+  "maxCommitsPerPoll": 20
+}

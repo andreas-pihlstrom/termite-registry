@@ -1,0 +1,10 @@
+{
+  "feed_urls": ["https://example.com/feed.xml"],
+  "poll_seconds": 300,
+  "max_entries_per_feed": 25,
+  "request_timeout": 30,
+  "bearer_token": "",
+  "allow_insecure_local": false,
+  "channel_name": "RSS and Atom Feed",
+  "account": "feeds"
+}

@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "producer": [],
+  "consumer": [],
+  "pollIntervalSeconds": 5,
+  "producerTimeoutSeconds": 5,
+  "consumerTimeoutSeconds": 10,
+  "maxItemsPerPoll": 16
+}

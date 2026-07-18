@@ -14,7 +14,11 @@ rm -f "$OUT"
 STAGE=$(mktemp -d)
 ditto --norsrc --noextattr --noqtn --noacl \
   "$SRC" "$STAGE/$(basename "$SRC")"
-rm -rf "$STAGE/$(basename "$SRC")/Frameworks" "$STAGE/$(basename "$SRC")"/*.log
+PACKAGE="$STAGE/$(basename "$SRC")"
+rm -rf "$PACKAGE/Frameworks"
+find "$PACKAGE" -type d \( -name __pycache__ -o -name .pytest_cache \) -prune -exec rm -rf -- {} +
+find "$PACKAGE" -type f \( -name '*.pyc' -o -name '*.log' -o -name .DS_Store \
+  -o -name config.json -o -name .env -o -name .env.local \) -delete
 (cd "$STAGE" && ditto -c -k --keepParent --norsrc --noextattr --noqtn --noacl \
   "$(basename "$SRC")" "$OLDPWD/$OUT")
 rm -rf "$STAGE"

@@ -1,0 +1,11 @@
+{
+  "repositories": ["owner/repository"],
+  "account": "github-login",
+  "pollSeconds": 30,
+  "initialLookbackSeconds": 86400,
+  "includeIssues": true,
+  "includeComments": true,
+  "projectHints": {
+    "owner/repository": "~/src/repository"
+  }
+}

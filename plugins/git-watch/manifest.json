@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.git-watch",
+  "name": "Git Watch",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels"],
+  "description": "Read new commits from one explicitly configured local repository into the Work Inbox",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/git-watch"
+}

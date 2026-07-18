@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.webhook-inbox",
+  "name": "Webhook Inbox",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Receive authenticated JSON webhooks and return approved replies to one configured callback",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/webhook-inbox"
+}

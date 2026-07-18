@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "allowedListNames": [],
+  "allowedListIDs": [],
+  "pollIntervalSeconds": 10,
+  "maxRemindersPerPoll": 64
+}

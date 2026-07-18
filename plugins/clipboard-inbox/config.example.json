@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "pollClipboard": false,
+  "writeApprovedReplies": false,
+  "includeCurrentClipboard": false,
+  "pollIntervalSeconds": 1
+}

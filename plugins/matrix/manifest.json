@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.matrix",
+  "name": "Matrix Rooms",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Receive messages from explicitly allowed Matrix rooms and send approved replies",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/matrix"
+}

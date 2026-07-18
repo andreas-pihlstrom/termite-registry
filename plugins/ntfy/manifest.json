@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.ntfy",
+  "name": "ntfy Topics",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Receive allowlisted ntfy topics and optionally publish approved replies to one fixed topic",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/ntfy"
+}

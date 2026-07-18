@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.imessage",
+  "name": "iMessage",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Allowlisted Messages conversations as reviewable work with explicitly enabled approved replies",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/imessage"
+}

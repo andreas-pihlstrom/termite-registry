@@ -16,6 +16,7 @@ from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parent.parent
 KINDS = {"shader", "theme", "rig", "patch", "plugin", "channel"}
+CHANNEL_MODES = {"two-way", "inbound-only", "read-only"}
 REQUIRED = ["kind", "id", "name", "description", "author", "license", "version"]
 
 errors = []
@@ -74,10 +75,16 @@ def check_channel_archive(entry, path: Path):
     try:
         with zipfile.ZipFile(path) as archive:
             names = archive.namelist()
+            if len(names) > 128:
+                err(f"{entry['id']}: Channel archive has too many files")
+                return
             for name in names:
                 member = PurePosixPath(name)
                 if member.is_absolute() or ".." in member.parts:
                     err(f"{entry['id']}: archive contains unsafe path '{name}'")
+                    return
+                if member.name in {"config.json", ".env", ".env.local"}:
+                    err(f"{entry['id']}: archive must not ship live configuration or secrets")
                     return
             manifests = [name for name in names
                          if len(PurePosixPath(name).parts) == 2
@@ -98,6 +105,10 @@ def check_channel_archive(entry, path: Path):
             capabilities = manifest.get("capabilities")
             if not isinstance(capabilities, list) or "channels" not in capabilities:
                 err(f"{entry['id']}: archive manifest does not request channels")
+            declared = entry.get("capabilities")
+            if isinstance(capabilities, list) and isinstance(declared, list):
+                if set(capabilities) != set(declared):
+                    err(f"{entry['id']}: archive and registry capabilities do not match")
             entrypoint = manifest.get("entrypoint")
             if not isinstance(entrypoint, str) or not entrypoint:
                 err(f"{entry['id']}: archive manifest has no entrypoint")
@@ -125,6 +136,15 @@ def check_extension(entry):
         capabilities = entry.get("capabilities")
         if not isinstance(capabilities, list) or "channels" not in capabilities:
             err(f"{entry['id']}: Channel metadata must declare the channels capability")
+        mode = entry.get("mode")
+        if mode not in CHANNEL_MODES:
+            err(f"{entry['id']}: Channel mode must be one of {sorted(CHANNEL_MODES)}")
+        if not isinstance(entry.get("setup"), str) or not entry["setup"].strip():
+            err(f"{entry['id']}: Channel metadata needs a concise setup description")
+        if mode == "two-way" and isinstance(capabilities, list) and "events.read" not in capabilities:
+            err(f"{entry['id']}: two-way Channel needs events.read for approved replies")
+        if mode in {"read-only", "inbound-only"} and isinstance(capabilities, list) and "events.read" in capabilities:
+            err(f"{entry['id']}: non-replying Channel must not request events.read")
 
     rel = entry.get("file")
     if not rel:
@@ -187,6 +207,26 @@ def main():
     for f in reg.get("featured", []):
         if f.split(":", 1)[-1] not in ids:
             err(f"featured entry not in registry: {f}")
+
+    source_channels = set()
+    for manifest_path in (ROOT / "plugins").glob("*/manifest.json"):
+        try:
+            manifest = json.loads(manifest_path.read_text())
+        except (OSError, json.JSONDecodeError) as exc:
+            err(f"{manifest_path.relative_to(ROOT)}: invalid manifest ({exc})")
+            continue
+        if "channels" in manifest.get("capabilities", []):
+            source_channels.add(manifest.get("id"))
+    registry_channels = {
+        entry.get("id") for entry in entries
+        if entry.get("kind") == "channel"
+        and str(entry.get("id", "")).startswith("dev.termite.")
+    }
+    if source_channels != registry_channels:
+        for channel_id in sorted(source_channels - registry_channels):
+            err(f"first-party Channel source is not registered: {channel_id}")
+        for channel_id in sorted(registry_channels - source_channels):
+            err(f"registered first-party Channel has no source: {channel_id}")
 
     if errors:
         print(f"\n{len(errors)} problem(s).")

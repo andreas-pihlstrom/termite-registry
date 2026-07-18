@@ -1,0 +1,11 @@
+{
+  "listen_host": "127.0.0.1",
+  "listen_port": 8787,
+  "inbound_secret": "",
+  "callback_url": "",
+  "callback_bearer_token": "",
+  "allow_insecure_local_callback": false,
+  "max_body_bytes": 65536,
+  "channel_name": "Webhook Inbox",
+  "account": "local"
+}

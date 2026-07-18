@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.slack",
+  "name": "Slack Channel",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Routes one selected Slack channel through Termite's reviewed inbox",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/slack"
+}

@@ -1,0 +1,6 @@
+{
+  "channelId": "C0123456789",
+  "account": "workspace-name",
+  "pollSeconds": 5,
+  "initialLookbackSeconds": 300
+}

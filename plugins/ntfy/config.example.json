@@ -1,0 +1,13 @@
+{
+  "server_url": "https://ntfy.sh",
+  "topics": ["your-private-inbox"],
+  "access_token": "",
+  "poll_seconds": 60,
+  "initial_since": "10m",
+  "max_messages": 100,
+  "reply_topic": "",
+  "max_publish_bytes": 4096,
+  "channel_name": "ntfy Topics",
+  "account": "ntfy.sh",
+  "allow_insecure_local": false
+}

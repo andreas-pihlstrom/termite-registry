@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.rss-feed",
+  "name": "RSS and Atom Feed",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels"],
+  "description": "Poll RSS and Atom feeds into a read-only Termite Channel",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/rss-feed"
+}

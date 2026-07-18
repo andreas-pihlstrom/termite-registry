@@ -1,0 +1,6 @@
+{
+  "channelIds": ["123456789012345678"],
+  "account": "workspace-bot",
+  "pollSeconds": 5,
+  "initialFetchLimit": 25
+}

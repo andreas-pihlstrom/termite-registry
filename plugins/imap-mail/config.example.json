@@ -1,0 +1,17 @@
+{
+  "imap_host": "imap.example.com",
+  "imap_port": 993,
+  "username": "you@example.com",
+  "password": "",
+  "mailbox": "INBOX",
+  "search": "ALL",
+  "poll_seconds": 120,
+  "max_messages": 50,
+  "smtp_host": "smtp.example.com",
+  "smtp_port": 465,
+  "smtp_mode": "ssl",
+  "smtp_username": "you@example.com",
+  "smtp_password": "",
+  "from_address": "you@example.com",
+  "channel_name": "Email Inbox"
+}

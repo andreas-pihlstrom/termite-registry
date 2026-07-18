@@ -1,0 +1,5 @@
+{
+  "allowedChatIds": [-1001234567890],
+  "account": "my_bot",
+  "longPollSeconds": 25
+}

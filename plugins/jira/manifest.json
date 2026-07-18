@@ -1,0 +1,11 @@
+{
+  "manifestVersion": 1,
+  "id": "dev.termite.jira",
+  "name": "Jira Cloud Channel",
+  "version": "1.0.0",
+  "entrypoint": "channel.py",
+  "enabled": true,
+  "capabilities": ["channels", "events.read"],
+  "description": "Routes allowlisted Jira Cloud issues and comments through Termite",
+  "homepage": "https://github.com/andreas-pihlstrom/termite-registry/tree/main/plugins/jira"
+}
